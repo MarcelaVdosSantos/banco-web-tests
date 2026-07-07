@@ -3,7 +3,7 @@ describe('Login', () => {
   //arrange
     //cy.visit(cy.env('URL')) -->> esta forma forma foi descontinuada
     cy.env(['URL']).then(({ URL }) => {
-    cy.visit(URL)
+    cy.visit('/')
     })
     cy.screenshot('apos-visitar-pagina')
   })
