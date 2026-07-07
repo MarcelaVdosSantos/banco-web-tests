@@ -1,7 +1,10 @@
 describe('Login', () => {
   beforeEach(() =>{
   //arrange
-    cy.visit('http://localhost:4000')
+    //cy.visit(cy.env('URL'))
+    cy.env(['URL']).then(({ URL }) => {
+      cy.visit(URL)
+    })
     cy.screenshot('apos-visitar-pagina')
   })
 
